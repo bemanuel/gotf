@@ -10,7 +10,7 @@ ENTRYPOINT ["/usr/bin/terraform"]
 
 CMD ["--help"]
 
-#hadolint --ignore DL3003,DL3018,DL3019
+#hadolint ignore=DL3003,DL3018,DL3019
 RUN apk update && \
     apk add curl jq python3 bash ca-certificates git openssl unzip wget && \
     cd /tmp && \
